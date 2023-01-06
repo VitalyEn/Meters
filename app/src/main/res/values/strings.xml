@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Meters</string>
+    <string name="addMeterDescription">Добавить счетчик</string>
 </resources>
