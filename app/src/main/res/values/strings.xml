@@ -3,4 +3,9 @@
     <string name="addMeterDescription">Добавить счетчик</string>
     <string name="adressLabel">Адрес</string>
     <string name="adress">Крылова 15 Корпус 1 подъезд 1</string>
+    <string name="meterNumber">Номер счетчика</string>
+    <string name="T1">Тариф Т1</string>
+    <string name="T2">Тариф Т2</string>
+    <string name="T">Тариф Т</string>
+    <string name="buttonSave">Сохранить показания</string>
 </resources>
