@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">Meters</string>
     <string name="addMeterDescription">Добавить счетчик</string>
-    <string name="adress1">Крылова 15 Корпус 1 п.1</string>
+    <string name="adress">Адрес 1</string>
     <string name="meterNumber">Номер счетчика</string>
     <string name="T1">Тариф Т1</string>
     <string name="T2">Тариф Т2</string>
     <string name="T">Тариф Т</string>
     <string name="buttonSave">Сохранить показания</string>
+    <string name="adress1">Крылова 15 Корпус 1 п.1</string>
 </resources>

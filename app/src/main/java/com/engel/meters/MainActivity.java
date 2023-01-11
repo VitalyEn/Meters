@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         buttonMeter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = MeterActivity.newIntent(MainActivity.this);
+                Intent intent = MeterActivity.newIntent(MainActivity.this,
+                        buttonMeter1.getText().toString());
                 startActivity(intent);
             }
         });
