@@ -30,6 +30,7 @@ public class MeterActivity extends AppCompatActivity {
         String adress = getIntent().getStringExtra(EXTRA_ADRESS);
         textViewAdress.setText(adress);
     }
+
     public static Intent newIntent(Context context, String adress){
         Intent intent = new Intent(context, MeterActivity.class);
         intent.putExtra(EXTRA_ADRESS, adress);
