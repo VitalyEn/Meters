@@ -49,11 +49,11 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/textViewNumber"
+            android:id="@+id/editTextNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="56464555"
+            tools:text="56464555"
             android:textAlignment="center"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="16sp"
@@ -78,11 +78,11 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/textViewT1"
+            android:id="@+id/editTextT1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="1345"
+            tools:text="1345"
             android:textAlignment="center"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="16sp"
@@ -107,11 +107,11 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/textViewT2"
+            android:id="@+id/editTextT2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="566"
+            tools:text="566"
             android:textAlignment="center"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="16sp"
@@ -136,17 +136,18 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/textViewT"
+            android:id="@+id/editTextT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="60000"
+            tools:text="60000"
             android:textAlignment="center"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>
     <Button
+        android:id="@+id/buttonOnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/buttonSave"

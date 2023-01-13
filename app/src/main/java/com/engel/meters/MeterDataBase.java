@@ -22,4 +22,6 @@ public abstract class MeterDataBase extends RoomDatabase{
         }
         return instance;
     }
+
+    public abstract MeterDAO meterDAO();
 }
