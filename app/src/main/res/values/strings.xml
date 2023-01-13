@@ -17,4 +17,8 @@
     <string name="adress8">Крылова 15 Корпус 3 п.2</string>
     <string name="adress9">Шевченко 288 Корпус 3</string>
     <string name="adress10">Шевченко 288 Корпус 4</string>
+    <string name="hintMeterNumber">№ счетчика</string>
+    <string name="hintT1">Введите показания Т1</string>
+    <string name="hintT2">Введите показания T2</string>
+    <string name="hintT">Введите показания Т</string>
 </resources>
