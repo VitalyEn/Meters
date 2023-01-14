@@ -14,11 +14,11 @@ public class MeterActivity extends AppCompatActivity {
     private static final String EXTRA_ADRESS = "adress";
 
     private TextView textViewAdress;
-    private EditText editTextNumber;
-    private EditText editTextT1;
-    private EditText editTextT2;
-    private EditText editTextT;
-    private Button buttonOnSave;
+    private EditText editTextNumber_1;
+    private EditText editTextT1_1;
+    private EditText editTextT2_1;
+    private EditText editTextT_1;
+    private Button buttonOnSave_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +31,11 @@ public class MeterActivity extends AppCompatActivity {
 
     private void initViews(){
         textViewAdress = findViewById(R.id.textViewAdress);
-        editTextNumber = findViewById(R.id.editTextNumber);
-        editTextT1 = findViewById(R.id.editTextT1);
-        editTextT2 = findViewById(R.id.editTextT2);
-        editTextT = findViewById(R.id.editTextT);
-        buttonOnSave = findViewById(R.id.buttonOnSave);
+        editTextNumber_1 = findViewById(R.id.editTextNumber_1);
+        editTextT1_1 = findViewById(R.id.editTextT1_1);
+        editTextT2_1 = findViewById(R.id.editTextT2_1);
+        editTextT_1 = findViewById(R.id.editTextT_1);
+        buttonOnSave_1 = findViewById(R.id.buttonOnSave_1);
     }
 
     private void setupAdress(){
