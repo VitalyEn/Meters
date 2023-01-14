@@ -21,4 +21,5 @@
     <string name="hintT1">Введите показания Т1</string>
     <string name="hintT2">Введите показания T2</string>
     <string name="hintT">Введите показания Т</string>
+    <string name="textViewSaveMessage">Сохранено</string>
 </resources>
