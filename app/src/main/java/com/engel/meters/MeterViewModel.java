@@ -23,7 +23,7 @@ public class MeterViewModel extends AndroidViewModel {
     public void saveMeter(Meter meter){
         Thread thread = new Thread(() -> {
             meterDao.add(meter);
-            shouldCloseScreen.postValue(true);
+           // shouldCloseScreen.postValue(true);
         });
         thread.start();
     }

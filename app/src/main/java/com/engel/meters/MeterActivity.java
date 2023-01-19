@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ public class MeterActivity extends AppCompatActivity {
     private EditText editTextT2_1;
     private EditText editTextT_1;
     private Button buttonOnSave_1;
+    private TextView saveMessageTextView_1;
 
     private MeterViewModel viewModel;
 
@@ -38,6 +40,12 @@ public class MeterActivity extends AppCompatActivity {
 
         initViews();
         setupAdress();
+
+        buttonOnSave_1.setOnClickListener(view -> {
+            saveMeter();
+            saveMessageTextView_1.setVisibility(View.VISIBLE);
+            buttonOnSave_1.setVisibility(View.GONE);
+        });
     }
 
     private void initViews(){
@@ -47,6 +55,7 @@ public class MeterActivity extends AppCompatActivity {
         editTextT2_1 = findViewById(R.id.editTextT2_1);
         editTextT_1 = findViewById(R.id.editTextT_1);
         buttonOnSave_1 = findViewById(R.id.buttonOnSave_1);
+        saveMessageTextView_1 = findViewById(R.id.saveMessageTextView_1);
     }
 
     private void setupAdress(){
