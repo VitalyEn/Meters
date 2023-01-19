@@ -1,6 +1,8 @@
 package com.engel.meters;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,10 +22,19 @@ public class MeterActivity extends AppCompatActivity {
     private EditText editTextT_1;
     private Button buttonOnSave_1;
 
+    private MeterViewModel viewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meter);
+
+        viewModel = new ViewModelProvider(this).get(MeterViewModel.class);
+        viewModel.getShouldCloseScreen().observe(this, shouldClose -> {
+            if(shouldClose){
+                finish();
+            }
+        });
 
         initViews();
         setupAdress();
@@ -50,6 +61,7 @@ public class MeterActivity extends AppCompatActivity {
         int t2 = Integer.parseInt(editTextT2_1.getText().toString().trim());
         int t = Integer.parseInt(editTextT_1.getText().toString().trim());
         Meter meter = new Meter(id,adress,t1,t2,t);
+        viewModel.saveMeter(meter);
     }
 
     public static Intent newIntent(Context context, String adress){
