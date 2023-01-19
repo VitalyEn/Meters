@@ -43,6 +43,15 @@ public class MeterActivity extends AppCompatActivity {
         textViewAdress.setText(adress);
     }
 
+    private void saveMeter(){
+        int id = Integer.parseInt(editTextNumber_1.getText().toString().trim());
+        String adress = textViewAdress.getText().toString();
+        int t1 = Integer.parseInt(editTextT_1.getText().toString().trim());
+        int t2 = Integer.parseInt(editTextT2_1.getText().toString().trim());
+        int t = Integer.parseInt(editTextT_1.getText().toString().trim());
+        Meter meter = new Meter(id,adress,t1,t2,t);
+    }
+
     public static Intent newIntent(Context context, String adress){
         Intent intent = new Intent(context, MeterActivity.class);
         intent.putExtra(EXTRA_ADRESS, adress);
