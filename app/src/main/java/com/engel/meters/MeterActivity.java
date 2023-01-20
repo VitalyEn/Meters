@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MeterActivity extends AppCompatActivity {
 
     private static final String EXTRA_ADRESS = "adress";
@@ -40,6 +43,7 @@ public class MeterActivity extends AppCompatActivity {
 
         initViews();
         setupAdress();
+        loadMeterFromDB();
 
         buttonOnSave_1.setOnClickListener(view -> {
             saveMeter();
@@ -63,6 +67,16 @@ public class MeterActivity extends AppCompatActivity {
         textViewAdress.setText(adress);
     }
 
+    private void loadMeterFromDB(){
+        List<Meter> meters;
+        meters = viewModel.loadMeters();
+        if(!meters.isEmpty()) {
+            editTextNumber_1.setText(meters.get(0).getId());
+            meters.get(0).getT1_tariff();
+            meters.get(0).getT2_tariff();
+            meters.get(0).getT_tariff();
+        }
+    }
     private void saveMeter(){
         int id = Integer.parseInt(editTextNumber_1.getText().toString().trim());
         String adress = textViewAdress.getText().toString();

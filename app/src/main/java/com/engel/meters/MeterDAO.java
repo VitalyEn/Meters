@@ -10,7 +10,7 @@ import java.util.List;
 @Dao
 public interface MeterDAO {
     @Query("SELECT * FROM meters")
-    LiveData<List<Meter>> getMeters();
+    List<Meter> getMeters();
 
     @Insert
     void add(Meter meter);
