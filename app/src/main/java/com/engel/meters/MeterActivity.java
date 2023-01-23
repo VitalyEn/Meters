@@ -49,6 +49,7 @@ public class MeterActivity extends AppCompatActivity {
             saveMeter();
             saveMessageTextView_1.setVisibility(View.VISIBLE);
             buttonOnSave_1.setVisibility(View.GONE);
+            loadMeterFromDB();
         });
     }
 
@@ -71,12 +72,13 @@ public class MeterActivity extends AppCompatActivity {
         List<Meter> meters;
         meters = viewModel.loadMeters();
         if(!meters.isEmpty()) {
-            editTextNumber_1.setText(meters.get(0).getId());
+            editTextNumber_1.setText(Integer.toString(meters.get(0).getId()));
             meters.get(0).getT1_tariff();
             meters.get(0).getT2_tariff();
             meters.get(0).getT_tariff();
         }
     }
+
     private void saveMeter(){
         int id = Integer.parseInt(editTextNumber_1.getText().toString().trim());
         String adress = textViewAdress.getText().toString();
