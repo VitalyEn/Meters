@@ -11,13 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MeterViewModel extends AndroidViewModel {
-    private MeterDAO meterDao;
+    private MeterDataBase meterDataBase;
     private MutableLiveData<Boolean> shouldCloseScreen = new MutableLiveData<>();
     List<Meter> list = new ArrayList<>();
 
     public MeterViewModel(@NonNull Application application){
         super(application);
-        meterDao = MeterDataBase.getInstance(application).meterDAO();
+        meterDataBase = MeterDataBase.getInstance(application);
     }
 
     public LiveData<Boolean> getShouldCloseScreen(){
@@ -26,7 +26,7 @@ public class MeterViewModel extends AndroidViewModel {
 
     public void saveMeter(Meter meter){
         Thread thread = new Thread(() -> {
-            meterDao.add(meter);
+            meterDataBase.meterDAO().update(meter);
            // shouldCloseScreen.postValue(true);
         });
         thread.start();
@@ -34,7 +34,7 @@ public class MeterViewModel extends AndroidViewModel {
 
     public List<Meter> loadMeters(){
 
-        Thread thread = new Thread(() -> list = meterDao.getMeters());
+        Thread thread = new Thread(() -> list = meterDataBase.meterDAO().getMeters());
         thread.start();
         return list;
     }

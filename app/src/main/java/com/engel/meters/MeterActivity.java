@@ -71,8 +71,9 @@ public class MeterActivity extends AppCompatActivity {
     private void loadMeterFromDB(){
         List<Meter> meters;
         meters = viewModel.loadMeters();
+
         if(!meters.isEmpty()) {
-            editTextNumber_1.setText(Integer.toString(meters.get(0).getId()));
+            editTextNumber_1.setText(Integer.toString(meters.get(1).getId()));
             meters.get(0).getT1_tariff();
             meters.get(0).getT2_tariff();
             meters.get(0).getT_tariff();

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -14,6 +15,9 @@ public interface MeterDAO {
 
     @Insert
     void add(Meter meter);
+
+    @Update
+    void update(Meter meter);
 
     @Query("DELETE FROM meters WHERE id = :id")
     void remove(int id);
